@@ -1,24 +1,12 @@
-# README
+# Doable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A todo app built from "Rails New", a tutorial on the Rails YouTube channel by [Typecraft](https://www.typecraft.com).
 
-Things you may want to cover:
+![Rails New on YouTube](./screenshots/yt_rails_new.png)
 
-* Ruby version
+- Ruby version: 3.4.4
+- Gems: tailwindcss-rails
 
-* System dependencies
+## Get Started
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run `bin/dev` to start the rails server using Tailwind
