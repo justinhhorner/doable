@@ -12,7 +12,7 @@ class TodosController < ApplicationController
 
   # GET /todos/new
   def new
-    @todo = Todo.new
+    @todo = Todo.new(project_id: params[:project_id])
   end
 
   # GET /todos/1/edit

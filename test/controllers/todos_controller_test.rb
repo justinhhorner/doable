@@ -3,6 +3,7 @@ require "test_helper"
 class TodosControllerTest < ActionDispatch::IntegrationTest
   setup do
     @todo = todos(:one)
+    @project = projects(:project_one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create todo" do
     assert_difference("Todo.count") do
-      post todos_url, params: { todo: { description: @todo.description, name: @todo.name } }
+      post todos_url, params: { todo: { description: @todo.description, name: @todo.name, project_id: @project.id } }
     end
 
     assert_redirected_to todo_url(Todo.last)
