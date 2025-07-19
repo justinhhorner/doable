@@ -7,37 +7,37 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
-  def new 
+  def new
     @project = Project.new
   end
 
   def create
     @project = Project.new(project_params)
-    
+
     if @project.save
       flash[:notice] = "Project created succesfully!"
       redirect_to project_path(@project)
     else
-      render:new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
-  def edit 
+  def edit
     @project = Project.find(params[:id])
   end
-  
-  def update 
+
+  def update
     @project = Project.find(params[:id])
-    
+
     if @project.update(project_params)
       flash[:notice] = "Project updated succesfully!"
       redirect_to project_path(@project)
     else
-      render:new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
-  def destroy 
+  def destroy
     @project = Project.find(params[:id])
 
     @project.destroy
@@ -46,6 +46,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.expect(project: [:name])
+    params.expect(project: [ :name ])
   end
 end
