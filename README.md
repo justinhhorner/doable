@@ -1,6 +1,6 @@
 # Doable
 
-A todo app built from "Rails New", a tutorial on the Rails YouTube channel by [Typecraft](https://www.typecraft.com).
+A todo app built from "Rails New", a tutorial on the Rails YouTube channel by [Typecraft](https://typecraft.dev)
 
 ![Rails New on YouTube](./screenshots/yt_rails_new.png)
 
