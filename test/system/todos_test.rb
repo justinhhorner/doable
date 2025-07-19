@@ -11,15 +11,17 @@ class TodosTest < ApplicationSystemTestCase
   end
 
   test "should create todo" do
+    @project = projects(:project_one)
     visit todos_url
-    click_on "New todo"
+    click_on "New Todo"
 
     fill_in "Description", with: @todo.description
     fill_in "Name", with: @todo.name
+    select(@project.name, from: "todo_project_id")
     click_on "Create Todo"
 
     assert_text "Todo was successfully created"
-    click_on "Back"
+    click_on "Back to todos"
   end
 
   test "should update Todo" do
@@ -31,12 +33,12 @@ class TodosTest < ApplicationSystemTestCase
     click_on "Update Todo"
 
     assert_text "Todo was successfully updated"
-    click_on "Back"
+    click_on "Back to todos"
   end
 
   test "should destroy Todo" do
     visit todo_url(@todo)
-    click_on "Destroy this todo", match: :first
+    click_on "Delete this todo", match: :first
 
     assert_text "Todo was successfully destroyed"
   end
