@@ -2,7 +2,7 @@
 service: doable
 
 # Name of the container image.
-image: your-user/doable
+image: typecrafthq/doable
 
 # Deploy to these servers.
 servers:
